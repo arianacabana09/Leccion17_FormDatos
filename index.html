@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Datos de Formulario</title>
+  </head>
+
+  <body>
+    <form id="frm1">
+      Nombre: <input type="text" name="name" id="name" required=""><br>
+      Mail: <input type="text" name="email" id="email" required=""><br>
+    </form>
+    <button type="" onclick="myFunction()" >Mostrar</button>
+
+    <strong><p id="mostrarNombre">Aquí se muestra el nombre </p>
+    <p id="mostrarMail">Aquí se muestra el correo </p></strong>
+
+    <script>
+    function myFunction() {
+      if (document.getElementById('name').value == "" || document.getElementById("email").value == "") {
+        alert("Ingresar los datos respectivos");
+      }
+      else {
+        document.getElementById("mostrarNombre").innerHTML = document.getElementById("name").value;
+        document.getElementById("mostrarMail").innerHTML = document.getElementById("email").value;
+      }
+    }
+    </script>
+  </body>
+</html>
